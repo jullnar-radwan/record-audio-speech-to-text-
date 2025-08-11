@@ -8,24 +8,27 @@
 
 ---
 
-## 📂 هيكلة المشروع
-speech-to-text-gcp/
-├─ .github/workflows/ci.yml # فحص تلقائي (CI) على GitHub
-├─ client/ # واجهة الويب
-│ ├─ index.html
-│ ├─ styles.css
-│ └─ script.js
-├─ server/ # خادم Node.js
-│ ├─ server.js
-│ ├─ package.json
-│ ├─ Dockerfile
-│ └─ .env.example
-├─ .gitignore # استثناء الملفات الحساسة
-├─ .dockerignore # استثناء الملفات من بناء الحاوية
-├─ render.yaml # ملف نشر على Render
-└─ README.md
+## هيكلة المشروع 📂
 
----
+<pre dir="ltr">speech-to-text-gcp/
+├─ .github/
+│  └─ workflows/
+│     └─ ci.yml
+├─ client/
+│  ├─ index.html
+│  ├─ styles.css
+│  └─ script.js
+├─ server/
+│  ├─ server.js
+│  ├─ package.json
+│  ├─ Dockerfile
+│  └─ .env.example
+├─ .gitignore
+├─ .dockerignore
+├─ render.yaml
+└─ README.md
+</pre>
+
 
 ## 🚀 تشغيل محليًا
 
