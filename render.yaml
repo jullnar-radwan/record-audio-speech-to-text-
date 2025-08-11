@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: stt-app
+    env: docker
+    plan: free
+    dockerfilePath: server/Dockerfile
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: DEFAULT_LANGUAGE
+        value: ar-SA
+      - key: TRANSLATE_TARGET_DEFAULT
+        value: en
+      - key: ENABLE_DIARIZATION_DEFAULT
+        value: true
+      - key: DIARIZATION_MIN
+        value: 2
+      - key: DIARIZATION_MAX
+        value: 6
+      - key: GCP_SA_KEY_BASE64
+        sync: false  # أدخلها من Dashboard كـ Secret
