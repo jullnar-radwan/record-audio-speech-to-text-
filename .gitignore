@@ -1,0 +1,29 @@
+# Node modules
+node_modules/
+npm-debug.log*
+yarn.lock
+pnpm-lock.yaml
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env files (ممنوع رفع المفاتيح)
+.env
+*.env
+
+# مفتاح الخدمة أو الملفات الحساسة
+*.key
+*.pem
+*.b64.txt
+
+# Docker
+.dockerignore
+
+# Build cache/temp
+dist/
+build/
+tmp/
