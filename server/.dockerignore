@@ -1,0 +1,11 @@
+node_modules
+npm-debug.log*
+.git
+.gitignore
+.github
+client/node_modules
+**/.DS_Store
+server/.env
+*.b64.txt
+*.key
+*.pem
