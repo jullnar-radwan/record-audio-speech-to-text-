@@ -12,8 +12,16 @@ jobs:
         working-directory: server
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 18
-      - run: npm ci
-      - run: node -e "console.log('Server deps OK')"
+          cache: 'npm'
+          cache-dependency-path: server/package-lock.json
+
+      # بدون package-lock.json نستخدم npm install
+      - name: Install deps
+        run: npm install
+
+      - name: Verify
+        run: node -e "console.log('Server deps OK')"
