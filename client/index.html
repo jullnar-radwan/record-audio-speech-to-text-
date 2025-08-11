@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>تسجيل الصوت → نص + تفريق المتحدثين + ترجمة</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>🎙️ تحويل الصوت إلى نص (Google Cloud) مع تفريق المتحدثين + ترجمة</h1>
+
+  <div class="controls">
+    <label>لغة التعرف:
+      <select id="language">
+        <option value="ar-SA">العربية (السعودية)</option>
+        <option value="ar-EG">العربية (مصر)</option>
+        <option value="en-US">English (US)</option>
+        <option value="en-GB">English (UK)</option>
+      </select>
+    </label>
+
+    <label>الترجمة إلى:
+      <select id="translateTarget">
+        <option value="">بدون ترجمة</option>
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+      </select>
+    </label>
+
+    <label class="checkbox">
+      <input type="checkbox" id="diarize" />
+      تفريق المتحدثين
+    </label>
+
+    <label>عدد المتحدثين (تقريبي):
+      <input type="number" id="spkCount" min="2" max="8" value="2" />
+    </label>
+
+    <button id="startBtn">بدء التسجيل</button>
+    <button id="stopBtn" disabled>إيقاف</button>
+  </div>
+
+  <div class="output">
+    <h2>النص اللحظي:</h2>
+    <div id="interim" class="interim"></div>
+
+    <h2>النص النهائي:</h2>
+    <div id="final" class="final"></div>
+
+    <h2>الترجمة (إن وُجدت):</h2>
+    <div id="translation" class="translation"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
